@@ -12,7 +12,7 @@ public class Controller {
     Label balance;
 
     @FXML
-    Button LogIn;
+    Button logIn;
 
     @FXML
     TextField username;
@@ -20,10 +20,14 @@ public class Controller {
     @FXML
     PasswordField password;
 
+    @FXML
     private void checkBalance(){
-        if (username.getText() == /*username from database*/ && password.getText() == /*password from DB*/){
-            balance.setText(/*balance from DB*/);
-            LogIn.setVisible(false);
+        DBHandler dbHandler = new DBHandler();
+
+        if (dbHandler.logIn(username.getText(),password.getText())){
+            System.out.println("inmethod");
+            balance.setText("Your balance: " + dbHandler.checkBalance(username.getText()) + " kr" );
+            logIn.setVisible(false);
             username.setVisible(false);
             password.setVisible(false);
         }

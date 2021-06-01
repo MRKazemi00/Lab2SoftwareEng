@@ -1,8 +1,29 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="494.0" prefWidth="591.0">
+         <children>
+            <TextField fx:id="username" layoutX="221.0" layoutY="197.0" promptText="Username" />
+            <PasswordField fx:id="password" layoutX="221.0" layoutY="247.0" promptText="Password" />
+            <Button fx:id="logIn" layoutX="270.0" layoutY="314.0" mnemonicParsing="false" onAction="#checkBalance" text="Log in" />
+            <Label fx:id="balance" layoutX="219.0" layoutY="223.0" prefHeight="18.0" prefWidth="198.0" />
+         </children>
+      </AnchorPane>
+   </children>
 </GridPane>
